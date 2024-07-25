@@ -1,0 +1,254 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  /* Navbar Styles */
+  .navbar {
+    width: 100%;
+    background-color: #2c2c2c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  .navbar-left {
+    flex: 1;
+  }
+  
+  .navbar-center {
+    flex: 2;
+    text-align: center;
+  }
+  
+  .navbar-right {
+    flex: 1;
+    text-align: right;
+  }
+  
+  .navbar-brand {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .nav-item {
+    margin: 0 10px;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-item a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .nav-item:hover a {
+    color: #ff4081;
+  }
+  
+  .buy-now-btn {
+    background-color: #ff4081;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .buy-now-btn:hover {
+    background-color: #e60073;
+  }
+  
+  /* Sidebar Styles */
+  .sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #2c2c2c;
+    color: #fff;
+    position: fixed;
+    top: 50px; /* Adjusted for the navbar height */
+    left: 0;
+    padding-top: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  .sidebar .profile {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #444;
+  }
+  
+  .sidebar .profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .sidebar .profile img:hover {
+    transform: scale(1.1);
+  }
+  
+  .sidebar .profile span {
+    display: block;
+    font-weight: bold;
+  }
+  
+  .sidebar .nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar .nav > li {
+    border-bottom: 1px solid #444;
+  }
+  
+  .sidebar .nav > li > a {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .sidebar .nav > li > a:hover {
+    background-color: #444;
+  }
+  
+  .sidebar .nav > li > a .icon {
+    margin-right: 10px;
+  }
+  
+  .sidebar .nav > li > ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+  }
+  
+  .sidebar .nav > li > ul > li > a {
+    padding: 10px 20px;
+    color: #ccc;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .sidebar .nav > li > ul > li > a:hover {
+    background-color: #555;
+    color: #fff;
+  }
+  
+  /* Main Content Styles */
+  .main-content {
+    margin-left: 250px;
+    padding: 20px;
+    padding-top: 70px; /* Adjusted for the navbar height */
+  }
+  
+  /* Image Section Styles */
+  .image-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .image-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 300px;
+  }
+  
+  .image-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .image-card .card-content {
+    padding: 15px;
+  }
+  
+  .image-card .card-content h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+  }
+  
+  .image-card .card-content p {
+    margin: 5px 0;
+    color: #666;
+  }
+  
+  .image-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Modal Styles */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    position: relative;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+  }
+  
+  /* Add any other styles you need */
+  
